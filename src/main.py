@@ -41,17 +41,26 @@ from src import projectEuler as pe
 # end_time = time.time()
 # print("mine: ", end_time - start_time)
 
-start_time = time.time()
-print('Problem15: ', pe.problem15mine(20))
-end_time = time.time()
-print("time: ", end_time - start_time)
+
+
+
+# start_time = time.time()
+# print('Problem15: ', pe.problem15mine(20))
+# end_time = time.time()
+# print("time: ", end_time - start_time)
+#
+# start_time = time.time()
+# print('Problem15rec: ', pe.problem15rec(13, 13))
+# end_time = time.time()
+# print("time: ", end_time - start_time)
+#
+# start_time = time.time()
+# print('Problem15it: ', pe.problem15iterative(20))
+# end_time = time.time()
+# print("time: ", end_time - start_time)
+
 
 start_time = time.time()
-print('Problem15rec: ', pe.problem15rec(13, 13))
-end_time = time.time()
-print("time: ", end_time - start_time)
-
-start_time = time.time()
-print('Problem15it: ', pe.problem15iterative(20))
+print('Problem7: ', pe.problem7(10001))
 end_time = time.time()
 print("time: ", end_time - start_time)

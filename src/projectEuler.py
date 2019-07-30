@@ -1,3 +1,6 @@
+import math
+
+
 def problem1(r):
 
     multiples = []
@@ -86,3 +89,29 @@ def problem9hybrid(s=1000):                                  #the fastest one
 # [20, 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16],
 # [20, 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54],
 # [01, 70, 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48]]
+
+
+def problem15mine(a): #i came up with this one!
+    result = (math.factorial(2*a))/(math.factorial(a)*math.factorial(a))
+    return int(result)
+
+
+def problem15rec(a, b): #recursive solution -- very slow
+    if a == 0 or b == 0:
+        return 1
+    return problem15rec(a, b-1) + problem15rec(a-1, b)
+
+
+def problem15iterative(a): # complexity O(a^2)
+
+    grid = [[0 for x in range(a+1)] for y in range(a+1)]
+
+    for i in range(0, a+1):
+        grid[i][0] = 1
+        grid[0][i] = 1
+
+    for i in range(1, a+1):
+        for j in range(1, a+1):
+            grid[i][j] = grid[i-1][j] + grid[i][j-1]
+
+    return grid[a][a]

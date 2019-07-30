@@ -25,18 +25,33 @@ from src import projectEuler as pe
 # print('Problem1: ', pe.problem1(1000))
 # print('Problem2: ', pe.problem2(0, 1, 0))
 
+#
+# start_time = time.time()
+# print('Problem9: ', pe.problem9())
+# end_time = time.time()
+# print("paper: ", end_time - start_time)
+#
+# start_time = time.time()
+# print('Problem9: ', pe.problem9naive())
+# end_time = time.time()
+# print("mine: ", end_time - start_time)
+#
+# start_time = time.time()
+# print('Problem9: ', pe.problem9hybrid())
+# end_time = time.time()
+# print("mine: ", end_time - start_time)
 
 start_time = time.time()
-print('Problem9: ', pe.problem9())
+print('Problem15: ', pe.problem15mine(20))
 end_time = time.time()
-print("paper: ", end_time - start_time)
+print("time: ", end_time - start_time)
 
 start_time = time.time()
-print('Problem9: ', pe.problem9naive())
+print('Problem15rec: ', pe.problem15rec(13, 13))
 end_time = time.time()
-print("mine: ", end_time - start_time)
+print("time: ", end_time - start_time)
 
 start_time = time.time()
-print('Problem9: ', pe.problem9hybrid())
+print('Problem15it: ', pe.problem15iterative(20))
 end_time = time.time()
-print("mine: ", end_time - start_time)
+print("time: ", end_time - start_time)
